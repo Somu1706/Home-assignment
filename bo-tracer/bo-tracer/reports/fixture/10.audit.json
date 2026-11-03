@@ -1,0 +1,180 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "10",
+  "customer": {
+    "id": "CIN:U55101TN2015PTC101010",
+    "name": "Pearl Hotels Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "pearl_shareholders",
+      "sha256": "af7fa96556d0accdd459038266aab83a2e7fad57966a042753c863be2727ffb5",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-05-10",
+      "doc_id": "quartz_master_data",
+      "sha256": "045d31da9514f14c0d09f610b0bd97af795ef55738cf36ff790983a8341c2baa",
+      "title": "Company master data (other company)"
+    }
+  ],
+  "extraction_meta": {
+    "pearl_shareholders": null,
+    "quartz_master_data": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "pearl_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U55101TN2015PTC101010",
+          "name": "Pearl Hotels Private Limited",
+          "quote": "Pearl Hotels Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:VWXPP2345Y",
+          "name": "Om Prakash",
+          "quote": "Om Prakash",
+          "type": "person"
+        },
+        {
+          "id": "PAN:WXYPS3456Z",
+          "name": "Priya Sen",
+          "quote": "Priya Sen",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Pearl Hotels Private Limited",
+          "holder": "Om Prakash",
+          "kind": "equity",
+          "pct": 70,
+          "quote": "Om Prakash (PAN VWXPP2345Y) - 7,000 equity shares - 70%"
+        },
+        {
+          "held": "Pearl Hotels Private Limited",
+          "holder": "Priya Sen",
+          "kind": "equity",
+          "pct": 30,
+          "quote": "Priya Sen (PAN WXYPS3456Z) - 3,000 equity shares - 30%"
+        }
+      ]
+    },
+    "quartz_master_data": {
+      "entities": [
+        {
+          "id": "CIN:U51909TN2019PTC111222",
+          "name": "Quartz Traders Private Limited",
+          "quote": "Quartz Traders Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:XYZPT4567A",
+          "name": "Ravi Teja",
+          "quote": "Ravi Teja",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Quartz Traders Private Limited",
+          "holder": "Ravi Teja",
+          "kind": "director",
+          "pct": null,
+          "quote": "Ravi Teja (DIN 08880001, PAN XYZPT4567A) - Director"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [],
+  "identity_decisions": [],
+  "outcome": {
+    "beneficial_owners": [
+      "Om Prakash",
+      "Priya Sen"
+    ],
+    "open_issues": {},
+    "status": "READY FOR OFFICER APPROVAL",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Pearl Hotels Private Limited": "pearl_shareholders"
+      },
+      "control_method_stakes": {
+        "Om Prakash": 0.7,
+        "Priya Sen": 0.3
+      },
+      "economic_stakes": {
+        "Om Prakash": 0.7,
+        "Priya Sen": 0.3
+      },
+      "holdings": {
+        "Pearl Hotels Private Limited": {
+          "Om Prakash": 0.7,
+          "Priya Sen": 0.3
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "pearl_shareholders",
+        "held": "Pearl Hotels Private Limited",
+        "holder": "Om Prakash",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 70,
+        "quote": "Om Prakash (PAN VWXPP2345Y) - 7,000 equity shares - 70%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "pearl_shareholders",
+        "held": "Pearl Hotels Private Limited",
+        "holder": "Priya Sen",
+        "kind": "equity",
+        "location": "line 5",
+        "pct": 30,
+        "quote": "Priya Sen (PAN WXYPS3456Z) - 3,000 equity shares - 30%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "quartz_master_data",
+        "held": "Quartz Traders Private Limited",
+        "holder": "Ravi Teja",
+        "kind": "director",
+        "location": "line 3",
+        "pct": null,
+        "quote": "Ravi Teja (DIN 08880001, PAN XYZPT4567A) - Director",
+        "verification": "quote verified"
+      }
+    ],
+    "rejected": []
+  }
+}
