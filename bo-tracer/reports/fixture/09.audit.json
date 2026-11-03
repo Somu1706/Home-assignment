@@ -1,0 +1,229 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "09",
+  "customer": {
+    "id": "CIN:U51100TN2018PTC909090",
+    "name": "Neem Exports Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "neem_shareholders",
+      "sha256": "9c9fd9fb5876ad7afd10fa5391af4b678a80b24c9a58f30b3703980070a967bb",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-04-01",
+      "doc_id": "maple_partners",
+      "sha256": "224cca7c0bd8724087acc59d78d3b15f14a801df44d69ad9e7359d90a718be72",
+      "title": "Statement of partners' contribution (extract)"
+    }
+  ],
+  "extraction_meta": {
+    "maple_partners": null,
+    "neem_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "maple_partners": {
+      "entities": [
+        {
+          "id": "LLPIN:AAC-5678",
+          "name": "Maple Ventures LLP",
+          "quote": "Maple Ventures LLP",
+          "type": "llp"
+        },
+        {
+          "id": "PAN:TUVPD0123W",
+          "name": "Rohan Das",
+          "quote": "Rohan Das",
+          "type": "person"
+        },
+        {
+          "id": "PAN:UVWPK1234X",
+          "name": "Simran Kaur",
+          "quote": "Simran Kaur",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Maple Ventures LLP",
+          "holder": "Rohan Das",
+          "kind": "equity",
+          "pct": 25,
+          "quote": "Rohan Das (PAN TUVPD0123W) - 25% of capital and profits"
+        },
+        {
+          "held": "Maple Ventures LLP",
+          "holder": "Simran Kaur",
+          "kind": "equity",
+          "pct": 15,
+          "quote": "Simran Kaur (PAN UVWPK1234X) - 15% of capital and profits"
+        }
+      ]
+    },
+    "neem_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U51100TN2018PTC909090",
+          "name": "Neem Exports Private Limited",
+          "quote": "Neem Exports Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "LLPIN:AAC-5678",
+          "name": "Maple Ventures LLP",
+          "quote": "Maple Ventures LLP",
+          "type": "llp"
+        },
+        {
+          "id": "PAN:STUPJ9012V",
+          "name": "Neha Joshi",
+          "quote": "Neha Joshi",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Neem Exports Private Limited",
+          "holder": "Maple Ventures LLP",
+          "kind": "equity",
+          "pct": 50,
+          "quote": "Maple Ventures LLP (LLPIN AAC-5678) - 5,000 equity shares - 50%"
+        },
+        {
+          "held": "Neem Exports Private Limited",
+          "holder": "Neha Joshi",
+          "kind": "equity",
+          "pct": 50,
+          "quote": "Neha Joshi (PAN STUPJ9012V) - 5,000 equity shares - 50%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "INSUFFICIENT INFORMATION",
+      "code": "GAP_BLOCKING",
+      "message": "Unaccounted share of Maple Ventures LLP is 30.0% of the customer: could hide an owner above 10%; request documents"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "LLPIN:AAC-5678",
+      "name": "Maple Ventures LLP",
+      "reason": "same ID in ['maple_partners', 'neem_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Neha Joshi",
+      "Rohan Das"
+    ],
+    "open_issues": {
+      "INSUFFICIENT INFORMATION": [
+        "GAP_BLOCKING"
+      ]
+    },
+    "status": "INSUFFICIENT INFORMATION",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Maple Ventures LLP": "maple_partners",
+        "Neem Exports Private Limited": "neem_shareholders"
+      },
+      "control_method_stakes": {
+        "Neha Joshi": 0.5,
+        "Unaccounted share of Maple Ventures LLP": 0.5
+      },
+      "economic_stakes": {
+        "Neha Joshi": 0.5,
+        "Rohan Das": 0.125,
+        "Simran Kaur": 0.075,
+        "Unaccounted share of Maple Ventures LLP": 0.3
+      },
+      "holdings": {
+        "Maple Ventures LLP": {
+          "Rohan Das": 0.25,
+          "Simran Kaur": 0.15,
+          "Unaccounted share of Maple Ventures LLP": 0.6
+        },
+        "Neem Exports Private Limited": {
+          "Maple Ventures LLP": 0.5,
+          "Neha Joshi": 0.5
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "neem_shareholders",
+        "held": "Neem Exports Private Limited",
+        "holder": "Maple Ventures LLP",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 50,
+        "quote": "Maple Ventures LLP (LLPIN AAC-5678) - 5,000 equity shares - 50%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "neem_shareholders",
+        "held": "Neem Exports Private Limited",
+        "holder": "Neha Joshi",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 50,
+        "quote": "Neha Joshi (PAN STUPJ9012V) - 5,000 equity shares - 50%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "maple_partners",
+        "held": "Maple Ventures LLP",
+        "holder": "Rohan Das",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 25,
+        "quote": "Rohan Das (PAN TUVPD0123W) - 25% of capital and profits",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "maple_partners",
+        "held": "Maple Ventures LLP",
+        "holder": "Simran Kaur",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 15,
+        "quote": "Simran Kaur (PAN UVWPK1234X) - 15% of capital and profits",
+        "verification": "quote and percentage verified"
+      }
+    ],
+    "rejected": []
+  }
+}

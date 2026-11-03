@@ -1,0 +1,236 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "05",
+  "customer": {
+    "id": "CIN:U24230TN2021PTC555000",
+    "name": "Indigo Pharma Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "indigo_shareholders",
+      "sha256": "c08d816e96b4379028e3333db1107a31c364c196fb77e5d5033e7234de8d1a23",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "sunrise_shareholders",
+      "sha256": "1177504617f85f5fb18a74487cfae1f535df017d9f215d75befddf731c4d66cb",
+      "title": "List of shareholders"
+    }
+  ],
+  "extraction_meta": {
+    "indigo_shareholders": null,
+    "sunrise_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "indigo_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U24230TN2021PTC555000",
+          "name": "Indigo Pharma Private Limited",
+          "quote": "Indigo Pharma Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:AAAPM1111A",
+          "name": "Rakesh Mehta",
+          "quote": "Rakesh Mehta (PAN AAAPM1111A)",
+          "type": "person"
+        },
+        {
+          "id": "PAN:AAAPM2222B",
+          "name": "Rakesh Mehta",
+          "quote": "Rakesh Mehta (PAN AAAPM2222B)",
+          "type": "person"
+        },
+        {
+          "id": "CIN:U74999DL2014PTC666666",
+          "name": "Sunrise Ventures Private Limited",
+          "quote": "Sunrise Ventures Private Limited",
+          "type": "company"
+        }
+      ],
+      "links": [
+        {
+          "held": "Indigo Pharma Private Limited",
+          "holder": "Rakesh Mehta",
+          "holder_id": "PAN:AAAPM1111A",
+          "kind": "equity",
+          "pct": 6,
+          "quote": "Rakesh Mehta (PAN AAAPM1111A) - 600 equity shares - 6%"
+        },
+        {
+          "held": "Indigo Pharma Private Limited",
+          "holder": "Rakesh Mehta",
+          "holder_id": "PAN:AAAPM2222B",
+          "kind": "equity",
+          "pct": 6,
+          "quote": "Rakesh Mehta (PAN AAAPM2222B) - 600 equity shares - 6%"
+        },
+        {
+          "held": "Indigo Pharma Private Limited",
+          "holder": "Sunrise Ventures Private Limited",
+          "kind": "equity",
+          "pct": 88,
+          "quote": "Sunrise Ventures Private Limited (CIN U74999DL2014PTC666666) - 8,800 equity shares - 88%"
+        }
+      ]
+    },
+    "sunrise_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U74999DL2014PTC666666",
+          "name": "Sunrise Ventures Private Limited",
+          "quote": "Sunrise Ventures Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:LMNPK2345N",
+          "name": "Uma Krishnan",
+          "quote": "Uma Krishnan",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Sunrise Ventures Private Limited",
+          "holder": "Uma Krishnan",
+          "kind": "equity",
+          "pct": 100,
+          "quote": "Uma Krishnan (PAN LMNPK2345N) - 10,000 equity shares - 100%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "IDENTITY MATCH REQUIRES REVIEW",
+      "code": "NAME_COLLISION",
+      "message": "Different ID numbers share the name 'Rakesh Mehta': kept as separate records"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U74999DL2014PTC666666",
+      "name": "Sunrise Ventures Private Limited",
+      "reason": "same ID in ['indigo_shareholders', 'sunrise_shareholders']"
+    },
+    {
+      "decision": "kept separate",
+      "deterministic": true,
+      "key": [
+        "PAN:AAAPM1111A",
+        "PAN:AAAPM2222B"
+      ],
+      "name": "Rakesh Mehta",
+      "reason": "same name, different identifiers"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Uma Krishnan"
+    ],
+    "open_issues": {
+      "IDENTITY MATCH REQUIRES REVIEW": [
+        "NAME_COLLISION"
+      ]
+    },
+    "status": "IDENTITY MATCH REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Indigo Pharma Private Limited": "indigo_shareholders",
+        "Sunrise Ventures Private Limited": "sunrise_shareholders"
+      },
+      "control_method_stakes": {
+        "Rakesh Mehta": 0.06,
+        "Uma Krishnan": 0.88
+      },
+      "economic_stakes": {
+        "Rakesh Mehta": 0.06,
+        "Uma Krishnan": 0.88
+      },
+      "holdings": {
+        "Indigo Pharma Private Limited": {
+          "Rakesh Mehta": 0.06,
+          "Sunrise Ventures Private Limited": 0.88
+        },
+        "Sunrise Ventures Private Limited": {
+          "Uma Krishnan": 1.0
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "indigo_shareholders",
+        "held": "Indigo Pharma Private Limited",
+        "holder": "Rakesh Mehta",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 6,
+        "quote": "Rakesh Mehta (PAN AAAPM1111A) - 600 equity shares - 6%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "indigo_shareholders",
+        "held": "Indigo Pharma Private Limited",
+        "holder": "Rakesh Mehta",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 6,
+        "quote": "Rakesh Mehta (PAN AAAPM2222B) - 600 equity shares - 6%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "indigo_shareholders",
+        "held": "Indigo Pharma Private Limited",
+        "holder": "Sunrise Ventures Private Limited",
+        "kind": "equity",
+        "location": "line 5",
+        "pct": 88,
+        "quote": "Sunrise Ventures Private Limited (CIN U74999DL2014PTC666666) - 8,800 equity shares - 88%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "sunrise_shareholders",
+        "held": "Sunrise Ventures Private Limited",
+        "holder": "Uma Krishnan",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 100,
+        "quote": "Uma Krishnan (PAN LMNPK2345N) - 10,000 equity shares - 100%",
+        "verification": "quote and percentage verified"
+      }
+    ],
+    "rejected": []
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "13",
+  "customer": {
+    "id": "CIN:U15490TN2021PTC131313",
+    "name": "Willow Foods Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "willow_shareholders",
+      "sha256": "a11085db68273b811a6ebd582c82567f866d7e0d6a570582c7bf0a4aeeb3842e",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "zeta_shareholders",
+      "sha256": "d4a726a776fdca8fbe72ff3701c360d5d0764a0fe561ca90c8b50c5d1e9d0c8b",
+      "title": "List of shareholders"
+    }
+  ],
+  "extraction_meta": {
+    "willow_shareholders": null,
+    "zeta_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "willow_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U15490TN2021PTC131313",
+          "name": "Willow Foods Private Limited",
+          "quote": "Willow Foods Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:CDEPP9012F",
+          "name": "Xena Paul",
+          "quote": "Xena Paul",
+          "type": "person"
+        },
+        {
+          "id": "CIN:U65990TN2017PTC131300",
+          "name": "Zeta Capital Private Limited",
+          "quote": "Zeta Capital Private Limited",
+          "type": "company"
+        }
+      ],
+      "links": [
+        {
+          "held": "Willow Foods Private Limited",
+          "holder": "Xena Paul",
+          "kind": "equity",
+          "pct": 85,
+          "quote": "Xena Paul (PAN CDEPP9012F) - 8,500 equity shares - 85%"
+        },
+        {
+          "held": "Willow Foods Private Limited",
+          "holder": "Zeta Capital Private Limited",
+          "kind": "equity",
+          "pct": 15,
+          "quote": "Zeta Capital Private Limited (CIN U65990TN2017PTC131300) - 1,500 equity shares - 15%"
+        }
+      ]
+    },
+    "zeta_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U65990TN2017PTC131300",
+          "name": "Zeta Capital Private Limited",
+          "quote": "Zeta Capital Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:DEFPL0123G",
+          "name": "Wen Li",
+          "quote": "Wen Li",
+          "type": "person"
+        },
+        {
+          "id": "PAN:EFGPP1234H",
+          "name": "Yash Patel",
+          "quote": "Yash Patel",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Zeta Capital Private Limited",
+          "holder": "Wen Li",
+          "kind": "equity",
+          "pct": 51,
+          "quote": "Wen Li (PAN DEFPL0123G) - 5,100 equity shares - 51%"
+        },
+        {
+          "held": "Zeta Capital Private Limited",
+          "holder": "Yash Patel",
+          "kind": "equity",
+          "pct": 49,
+          "quote": "Yash Patel (PAN EFGPP1234H) - 4,900 equity shares - 49%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+      "code": "CONTROL_METHOD_ONLY",
+      "message": "Wen Li crosses 10% only if majority holders are treated as controlling the whole stake (15.0% vs 7.65% economic)"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U65990TN2017PTC131300",
+      "name": "Zeta Capital Private Limited",
+      "reason": "same ID in ['willow_shareholders', 'zeta_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Xena Paul"
+    ],
+    "open_issues": {
+      "REGULATORY ASSESSMENT REQUIRES REVIEW": [
+        "CONTROL_METHOD_ONLY"
+      ]
+    },
+    "status": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Willow Foods Private Limited": "willow_shareholders",
+        "Zeta Capital Private Limited": "zeta_shareholders"
+      },
+      "control_method_stakes": {
+        "Wen Li": 0.15,
+        "Xena Paul": 0.85
+      },
+      "economic_stakes": {
+        "Wen Li": 0.0765,
+        "Xena Paul": 0.85,
+        "Yash Patel": 0.0735
+      },
+      "holdings": {
+        "Willow Foods Private Limited": {
+          "Xena Paul": 0.85,
+          "Zeta Capital Private Limited": 0.15
+        },
+        "Zeta Capital Private Limited": {
+          "Wen Li": 0.51,
+          "Yash Patel": 0.49
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "willow_shareholders",
+        "held": "Willow Foods Private Limited",
+        "holder": "Xena Paul",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 85,
+        "quote": "Xena Paul (PAN CDEPP9012F) - 8,500 equity shares - 85%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "willow_shareholders",
+        "held": "Willow Foods Private Limited",
+        "holder": "Zeta Capital Private Limited",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 15,
+        "quote": "Zeta Capital Private Limited (CIN U65990TN2017PTC131300) - 1,500 equity shares - 15%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "zeta_shareholders",
+        "held": "Zeta Capital Private Limited",
+        "holder": "Wen Li",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 51,
+        "quote": "Wen Li (PAN DEFPL0123G) - 5,100 equity shares - 51%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "zeta_shareholders",
+        "held": "Zeta Capital Private Limited",
+        "holder": "Yash Patel",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 49,
+        "quote": "Yash Patel (PAN EFGPP1234H) - 4,900 equity shares - 49%",
+        "verification": "quote and percentage verified"
+      }
+    ],
+    "rejected": []
+  }
+}

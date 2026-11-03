@@ -1,0 +1,279 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "11",
+  "customer": {
+    "id": "CIN:U01100TN2020PTC111111",
+    "name": "Tamarind Agro Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "tamarind_shareholders",
+      "sha256": "2193d6f95f07e8b541f73b2abcac6874c0df7bac09c9ac0e7b38c9e807bd8c03",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "aster_shareholders",
+      "sha256": "ae3d6ee173f6387903947b651c66a477d87120aca7e3f895a15c9d7f9838f613",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "birch_shareholders",
+      "sha256": "5ee81ead399bae123d07a2e6c69e16915f9dcf5f02af658ab92b7e908595aa44",
+      "title": "List of shareholders"
+    }
+  ],
+  "extraction_meta": {
+    "aster_shareholders": null,
+    "birch_shareholders": null,
+    "tamarind_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "aster_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U65920TN2010PTC121212",
+          "name": "Aster Holdings Private Limited",
+          "quote": "Aster Holdings Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:YZAPR5678B",
+          "name": "Sita Raman",
+          "quote": "Sita Raman",
+          "type": "person"
+        },
+        {
+          "id": "CIN:U65920TN2011PTC131313",
+          "name": "Birch Capital Private Limited",
+          "quote": "Birch Capital Private Limited",
+          "type": "company"
+        }
+      ],
+      "links": [
+        {
+          "held": "Aster Holdings Private Limited",
+          "holder": "Sita Raman",
+          "kind": "equity",
+          "pct": 80,
+          "quote": "Sita Raman (PAN YZAPR5678B) - 8,000 equity shares - 80%"
+        },
+        {
+          "held": "Aster Holdings Private Limited",
+          "holder": "Birch Capital Private Limited",
+          "kind": "equity",
+          "pct": 20,
+          "quote": "Birch Capital Private Limited (CIN U65920TN2011PTC131313) - 2,000 equity shares - 20%"
+        }
+      ]
+    },
+    "birch_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U65920TN2011PTC131313",
+          "name": "Birch Capital Private Limited",
+          "quote": "Birch Capital Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "CIN:U65920TN2010PTC121212",
+          "name": "Aster Holdings Private Limited",
+          "quote": "Aster Holdings Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:ZABPS6789C",
+          "name": "Tara Singh",
+          "quote": "Tara Singh",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Birch Capital Private Limited",
+          "holder": "Aster Holdings Private Limited",
+          "kind": "equity",
+          "pct": 30,
+          "quote": "Aster Holdings Private Limited (CIN U65920TN2010PTC121212) - 3,000 equity shares - 30%"
+        },
+        {
+          "held": "Birch Capital Private Limited",
+          "holder": "Tara Singh",
+          "kind": "equity",
+          "pct": 70,
+          "quote": "Tara Singh (PAN ZABPS6789C) - 7,000 equity shares - 70%"
+        }
+      ]
+    },
+    "tamarind_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U01100TN2020PTC111111",
+          "name": "Tamarind Agro Private Limited",
+          "quote": "Tamarind Agro Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "CIN:U65920TN2010PTC121212",
+          "name": "Aster Holdings Private Limited",
+          "quote": "Aster Holdings Private Limited",
+          "type": "company"
+        }
+      ],
+      "links": [
+        {
+          "held": "Tamarind Agro Private Limited",
+          "holder": "Aster Holdings Private Limited",
+          "kind": "equity",
+          "pct": 100,
+          "quote": "Aster Holdings Private Limited (CIN U65920TN2010PTC121212) - 10,000 equity shares - 100%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+      "code": "CYCLE",
+      "message": "Circular holding detected; stakes solved exactly as an infinite series"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U65920TN2010PTC121212",
+      "name": "Aster Holdings Private Limited",
+      "reason": "same ID in ['aster_shareholders', 'birch_shareholders', 'tamarind_shareholders']"
+    },
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U65920TN2011PTC131313",
+      "name": "Birch Capital Private Limited",
+      "reason": "same ID in ['aster_shareholders', 'birch_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Sita Raman",
+      "Tara Singh"
+    ],
+    "open_issues": {
+      "REGULATORY ASSESSMENT REQUIRES REVIEW": [
+        "CYCLE"
+      ]
+    },
+    "status": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Aster Holdings Private Limited": "aster_shareholders",
+        "Birch Capital Private Limited": "birch_shareholders",
+        "Tamarind Agro Private Limited": "tamarind_shareholders"
+      },
+      "control_method_stakes": {
+        "Sita Raman": 1.0,
+        "Tara Singh": 0.0
+      },
+      "economic_stakes": {
+        "Sita Raman": 0.8510638298,
+        "Tara Singh": 0.1489361702
+      },
+      "holdings": {
+        "Aster Holdings Private Limited": {
+          "Birch Capital Private Limited": 0.2,
+          "Sita Raman": 0.8
+        },
+        "Birch Capital Private Limited": {
+          "Aster Holdings Private Limited": 0.3,
+          "Tara Singh": 0.7
+        },
+        "Tamarind Agro Private Limited": {
+          "Aster Holdings Private Limited": 1.0
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "tamarind_shareholders",
+        "held": "Tamarind Agro Private Limited",
+        "holder": "Aster Holdings Private Limited",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 100,
+        "quote": "Aster Holdings Private Limited (CIN U65920TN2010PTC121212) - 10,000 equity shares - 100%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "aster_shareholders",
+        "held": "Aster Holdings Private Limited",
+        "holder": "Sita Raman",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 80,
+        "quote": "Sita Raman (PAN YZAPR5678B) - 8,000 equity shares - 80%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "aster_shareholders",
+        "held": "Aster Holdings Private Limited",
+        "holder": "Birch Capital Private Limited",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 20,
+        "quote": "Birch Capital Private Limited (CIN U65920TN2011PTC131313) - 2,000 equity shares - 20%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "birch_shareholders",
+        "held": "Birch Capital Private Limited",
+        "holder": "Aster Holdings Private Limited",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 30,
+        "quote": "Aster Holdings Private Limited (CIN U65920TN2010PTC121212) - 3,000 equity shares - 30%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "birch_shareholders",
+        "held": "Birch Capital Private Limited",
+        "holder": "Tara Singh",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 70,
+        "quote": "Tara Singh (PAN ZABPS6789C) - 7,000 equity shares - 70%",
+        "verification": "quote and percentage verified"
+      }
+    ],
+    "rejected": []
+  }
+}

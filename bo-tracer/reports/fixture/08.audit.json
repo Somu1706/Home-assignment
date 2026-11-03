@@ -1,0 +1,204 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "08",
+  "customer": {
+    "id": "CIN:U72200TN2022PTC808080",
+    "name": "Quill Software Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "quill_shareholders",
+      "sha256": "20c8522c660a98fb1078a420e416da5ddd27a2751a90f6daa14d840adaa67cad",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2025-06-01",
+      "doc_id": "quill_sha",
+      "sha256": "15b4942cac6dd391c4dbc2d27f8ed8eaf55d42d76e8936f5c307795a6423580a",
+      "title": "Shareholders' agreement (extract)"
+    }
+  ],
+  "extraction_meta": {
+    "quill_sha": null,
+    "quill_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "quill_sha": {
+      "entities": [
+        {
+          "id": "CIN:U72200TN2022PTC808080",
+          "name": "Quill Software Private Limited",
+          "quote": "Quill Software Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:QRSPM7890T",
+          "name": "Jai Malhotra",
+          "quote": "Jai Malhotra",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Quill Software Private Limited",
+          "holder": "Jai Malhotra",
+          "kind": "appoint_directors",
+          "pct": null,
+          "quote": "Jai Malhotra shall be entitled to appoint two of the three directors of the Company"
+        }
+      ]
+    },
+    "quill_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U72200TN2022PTC808080",
+          "name": "Quill Software Private Limited",
+          "quote": "Quill Software Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:QRSPM7890T",
+          "name": "Jai Malhotra",
+          "quote": "Jai Malhotra",
+          "type": "person"
+        },
+        {
+          "id": "PAN:RSTPR8901U",
+          "name": "Kavya Reddy",
+          "quote": "Kavya Reddy",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Quill Software Private Limited",
+          "holder": "Jai Malhotra",
+          "kind": "equity",
+          "pct": 5,
+          "quote": "Jai Malhotra (PAN QRSPM7890T) - 500 equity shares - 5%"
+        },
+        {
+          "held": "Quill Software Private Limited",
+          "holder": "Kavya Reddy",
+          "kind": "equity",
+          "pct": 95,
+          "quote": "Kavya Reddy (PAN RSTPR8901U) - 9,500 equity shares - 95%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+      "code": "CONTROL_REVIEW",
+      "message": "Jai Malhotra has a documented control right over Quill Software Private Limited: \"Jai Malhotra shall be entitled to appoint two of the three directors of the Company\" (quill_sha). Ownership below the threshold does not rule out beneficial ownership through control."
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U72200TN2022PTC808080",
+      "name": "Quill Software Private Limited",
+      "reason": "same ID in ['quill_sha', 'quill_shareholders']"
+    },
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "PAN:QRSPM7890T",
+      "name": "Jai Malhotra",
+      "reason": "same ID in ['quill_sha', 'quill_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Kavya Reddy"
+    ],
+    "open_issues": {
+      "REGULATORY ASSESSMENT REQUIRES REVIEW": [
+        "CONTROL_REVIEW"
+      ]
+    },
+    "status": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Quill Software Private Limited": "quill_shareholders"
+      },
+      "control_method_stakes": {
+        "Jai Malhotra": 0.05,
+        "Kavya Reddy": 0.95
+      },
+      "economic_stakes": {
+        "Jai Malhotra": 0.05,
+        "Kavya Reddy": 0.95
+      },
+      "holdings": {
+        "Quill Software Private Limited": {
+          "Jai Malhotra": 0.05,
+          "Kavya Reddy": 0.95
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "quill_shareholders",
+        "held": "Quill Software Private Limited",
+        "holder": "Jai Malhotra",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 5,
+        "quote": "Jai Malhotra (PAN QRSPM7890T) - 500 equity shares - 5%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "quill_shareholders",
+        "held": "Quill Software Private Limited",
+        "holder": "Kavya Reddy",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 95,
+        "quote": "Kavya Reddy (PAN RSTPR8901U) - 9,500 equity shares - 95%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "quill_sha",
+        "held": "Quill Software Private Limited",
+        "holder": "Jai Malhotra",
+        "kind": "appoint_directors",
+        "location": "line 2",
+        "pct": null,
+        "quote": "Jai Malhotra shall be entitled to appoint two of the three directors of the Company",
+        "verification": "quote verified"
+      }
+    ],
+    "rejected": []
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "02",
+  "customer": {
+    "id": "CIN:U17110TN2018PTC222222",
+    "name": "Saffron Textiles Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "saffron_shareholders",
+      "sha256": "9f19326df23b55fbfabb4b4d665c7f9b11c43eecf2d40b18fb1839a8fa8c81c6",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "yamuna_shareholders",
+      "sha256": "157ea9818975a663098c34317c87b02daf38ea7866384b9923cad0a609347b52",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2026-03-31",
+      "doc_id": "xylo_shareholders",
+      "sha256": "588d9e1c71495b67b4c0670d66cc06ff589731b3bc1fb07fc5caec2bec79ea68",
+      "title": "List of shareholders"
+    }
+  ],
+  "extraction_meta": {
+    "saffron_shareholders": null,
+    "xylo_shareholders": null,
+    "yamuna_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "saffron_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U17110TN2018PTC222222",
+          "name": "Saffron Textiles Private Limited",
+          "quote": "Saffron Textiles Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "CIN:U65900KA2015PTC222333",
+          "name": "Yamuna Holdings Private Limited",
+          "quote": "Yamuna Holdings Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:BCDPD2345C",
+          "name": "Kiran Das",
+          "quote": "Kiran Das",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Saffron Textiles Private Limited",
+          "holder": "Yamuna Holdings Private Limited",
+          "kind": "equity",
+          "pct": 70,
+          "quote": "Yamuna Holdings Private Limited (CIN U65900KA2015PTC222333) - 7,000 equity shares - 70%"
+        },
+        {
+          "held": "Saffron Textiles Private Limited",
+          "holder": "Kiran Das",
+          "kind": "equity",
+          "pct": 30,
+          "quote": "Kiran Das (PAN BCDPD2345C) - 3,000 equity shares - 30%"
+        }
+      ]
+    },
+    "xylo_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U65990MH2012PTC444555",
+          "name": "Xylo Investments Private Limited",
+          "quote": "Xylo Investments Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:DEFPM4567E",
+          "name": "Prakash Menon",
+          "quote": "Prakash Menon",
+          "type": "person"
+        },
+        {
+          "id": "PAN:EFGPJ5678F",
+          "name": "Sam Joseph",
+          "quote": "Sam Joseph",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Xylo Investments Private Limited",
+          "holder": "Prakash Menon",
+          "kind": "equity",
+          "pct": 80,
+          "quote": "Prakash Menon (PAN DEFPM4567E) - 800 shares - 80%"
+        },
+        {
+          "held": "Xylo Investments Private Limited",
+          "holder": "Sam Joseph",
+          "kind": "equity",
+          "pct": 20,
+          "quote": "Sam Joseph (PAN EFGPJ5678F) - 200 shares - 20%"
+        }
+      ]
+    },
+    "yamuna_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U65900KA2015PTC222333",
+          "name": "Yamuna Holdings Private Limited",
+          "quote": "Yamuna Holdings Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "CIN:U65990MH2012PTC444555",
+          "name": "Xylo Investments Private Limited",
+          "quote": "Xylo Investments Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:CDEPN3456D",
+          "name": "Leela Nair",
+          "quote": "Leela Nair",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Yamuna Holdings Private Limited",
+          "holder": "Xylo Investments Private Limited",
+          "kind": "equity",
+          "pct": 60,
+          "quote": "Xylo Investments Private Limited (CIN U65990MH2012PTC444555) - 60,000 shares - 60%"
+        },
+        {
+          "held": "Yamuna Holdings Private Limited",
+          "holder": "Leela Nair",
+          "kind": "equity",
+          "pct": 40,
+          "quote": "Leela Nair (PAN CDEPN3456D) - 40,000 shares - 40%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+      "code": "NEAR_THRESHOLD",
+      "message": "Sam Joseph holds 8.40%, at or just under 10%"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U65900KA2015PTC222333",
+      "name": "Yamuna Holdings Private Limited",
+      "reason": "same ID in ['saffron_shareholders', 'yamuna_shareholders']"
+    },
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U65990MH2012PTC444555",
+      "name": "Xylo Investments Private Limited",
+      "reason": "same ID in ['xylo_shareholders', 'yamuna_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Kiran Das",
+      "Leela Nair",
+      "Prakash Menon"
+    ],
+    "open_issues": {
+      "REGULATORY ASSESSMENT REQUIRES REVIEW": [
+        "NEAR_THRESHOLD"
+      ]
+    },
+    "status": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Saffron Textiles Private Limited": "saffron_shareholders",
+        "Xylo Investments Private Limited": "xylo_shareholders",
+        "Yamuna Holdings Private Limited": "yamuna_shareholders"
+      },
+      "control_method_stakes": {
+        "Kiran Das": 0.3,
+        "Prakash Menon": 0.7
+      },
+      "economic_stakes": {
+        "Kiran Das": 0.3,
+        "Leela Nair": 0.28,
+        "Prakash Menon": 0.336,
+        "Sam Joseph": 0.084
+      },
+      "holdings": {
+        "Saffron Textiles Private Limited": {
+          "Kiran Das": 0.3,
+          "Yamuna Holdings Private Limited": 0.7
+        },
+        "Xylo Investments Private Limited": {
+          "Prakash Menon": 0.8,
+          "Sam Joseph": 0.2
+        },
+        "Yamuna Holdings Private Limited": {
+          "Leela Nair": 0.4,
+          "Xylo Investments Private Limited": 0.6
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "saffron_shareholders",
+        "held": "Saffron Textiles Private Limited",
+        "holder": "Yamuna Holdings Private Limited",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 70,
+        "quote": "Yamuna Holdings Private Limited (CIN U65900KA2015PTC222333) - 7,000 equity shares - 70%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "saffron_shareholders",
+        "held": "Saffron Textiles Private Limited",
+        "holder": "Kiran Das",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 30,
+        "quote": "Kiran Das (PAN BCDPD2345C) - 3,000 equity shares - 30%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "yamuna_shareholders",
+        "held": "Yamuna Holdings Private Limited",
+        "holder": "Xylo Investments Private Limited",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 60,
+        "quote": "Xylo Investments Private Limited (CIN U65990MH2012PTC444555) - 60,000 shares - 60%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "yamuna_shareholders",
+        "held": "Yamuna Holdings Private Limited",
+        "holder": "Leela Nair",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 40,
+        "quote": "Leela Nair (PAN CDEPN3456D) - 40,000 shares - 40%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "xylo_shareholders",
+        "held": "Xylo Investments Private Limited",
+        "holder": "Prakash Menon",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 80,
+        "quote": "Prakash Menon (PAN DEFPM4567E) - 800 shares - 80%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "xylo_shareholders",
+        "held": "Xylo Investments Private Limited",
+        "holder": "Sam Joseph",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 20,
+        "quote": "Sam Joseph (PAN EFGPJ5678F) - 200 shares - 20%",
+        "verification": "quote and percentage verified"
+      }
+    ],
+    "rejected": []
+  }
+}

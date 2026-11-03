@@ -1,0 +1,205 @@
+{
+  "assessed_on": "2026-11-03",
+  "case_id": "12",
+  "customer": {
+    "id": "CIN:U73100TN2023PTC121200",
+    "name": "Umber Labs Private Limited",
+    "type": "company"
+  },
+  "documents": [
+    {
+      "date": "2026-03-31",
+      "doc_id": "umber_shareholders",
+      "sha256": "e882a050ad017281799457369297851b6fa839f39443e63b1578b539551f4dd7",
+      "title": "List of shareholders"
+    },
+    {
+      "date": "2023-07-01",
+      "doc_id": "umber_articles",
+      "sha256": "1aedc70499627f3093ccca2b837995bffb795de6d49ef764499693cf99a37144",
+      "title": "Articles of association (extract)"
+    }
+  ],
+  "extraction_meta": {
+    "umber_articles": null,
+    "umber_shareholders": null
+  },
+  "extraction_mode": "fixture",
+  "extraction_received": {
+    "umber_articles": {
+      "entities": [
+        {
+          "id": "CIN:U73100TN2023PTC121200",
+          "name": "Umber Labs Private Limited",
+          "quote": "Umber Labs Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:ABCPK7890D",
+          "name": "Uday Kapoor",
+          "quote": "Uday Kapoor",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Umber Labs Private Limited",
+          "holder": "Uday Kapoor",
+          "kind": "special_voting",
+          "pct": null,
+          "quote": "Each Class B equity share carries ten votes"
+        }
+      ]
+    },
+    "umber_shareholders": {
+      "entities": [
+        {
+          "id": "CIN:U73100TN2023PTC121200",
+          "name": "Umber Labs Private Limited",
+          "quote": "Umber Labs Private Limited",
+          "type": "company"
+        },
+        {
+          "id": "PAN:ABCPK7890D",
+          "name": "Uday Kapoor",
+          "quote": "Uday Kapoor",
+          "type": "person"
+        },
+        {
+          "id": "PAN:BCDPR8901E",
+          "name": "Vani Rao",
+          "quote": "Vani Rao",
+          "type": "person"
+        }
+      ],
+      "links": [
+        {
+          "held": "Umber Labs Private Limited",
+          "holder": "Uday Kapoor",
+          "kind": "equity",
+          "pct": 20,
+          "quote": "Uday Kapoor (PAN ABCPK7890D) - 2,000 Class B equity shares - 20%"
+        },
+        {
+          "held": "Umber Labs Private Limited",
+          "holder": "Vani Rao",
+          "kind": "equity",
+          "pct": 80,
+          "quote": "Vani Rao (PAN BCDPR8901E) - 8,000 Class A equity shares - 80%"
+        }
+      ]
+    }
+  },
+  "final_approval": "pending: only an authorised compliance officer can approve this file",
+  "flags": [
+    {
+      "category": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+      "code": "SHARE_CLASS",
+      "message": "Special voting rights for Uday Kapoor in Umber Labs Private Limited: stakes computed on economic shares only (umber_articles)"
+    }
+  ],
+  "identity_decisions": [
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "CIN:U73100TN2023PTC121200",
+      "name": "Umber Labs Private Limited",
+      "reason": "same ID in ['umber_articles', 'umber_shareholders']"
+    },
+    {
+      "decision": "matched by identifier",
+      "deterministic": true,
+      "key": "PAN:ABCPK7890D",
+      "name": "Uday Kapoor",
+      "reason": "same ID in ['umber_articles', 'umber_shareholders']"
+    }
+  ],
+  "outcome": {
+    "beneficial_owners": [
+      "Uday Kapoor",
+      "Vani Rao"
+    ],
+    "open_issues": {
+      "REGULATORY ASSESSMENT REQUIRES REVIEW": [
+        "SHARE_CLASS"
+      ]
+    },
+    "status": "REGULATORY ASSESSMENT REQUIRES REVIEW",
+    "unresolved": []
+  },
+  "reviewer_decisions": {},
+  "rule": {
+    "assessed_on": "2026-11-03",
+    "interpretation": "",
+    "last_checked": "2026-11-03",
+    "note": "",
+    "rule_id": "IN-CO-2023",
+    "rules_version": "2026-11-03.1",
+    "source": "PML (Maintenance of Records) Amendment Rules, 2023, notified 7 Mar 2023; RBI KYC Master Direction amended 28 Apr 2023. Checked via AZB & Partners (azbpartners.com/bank/amendment-to-pmla-rules) and AZB KYC MD note.",
+    "threshold": 0.1,
+    "valid_from": "2023-03-07",
+    "valid_to": null,
+    "verification": "secondary"
+  },
+  "scenarios": [
+    {
+      "choice": {
+        "Umber Labs Private Limited": "umber_shareholders"
+      },
+      "control_method_stakes": {
+        "Uday Kapoor": 0.2,
+        "Vani Rao": 0.8
+      },
+      "economic_stakes": {
+        "Uday Kapoor": 0.2,
+        "Vani Rao": 0.8
+      },
+      "holdings": {
+        "Umber Labs Private Limited": {
+          "Uday Kapoor": 0.2,
+          "Vani Rao": 0.8
+        }
+      },
+      "overallocated": false
+    }
+  ],
+  "software": {
+    "engine_version": "0.2.0",
+    "python": "3.13.18"
+  },
+  "validation": {
+    "accepted_links": [
+      {
+        "doc": "umber_shareholders",
+        "held": "Umber Labs Private Limited",
+        "holder": "Uday Kapoor",
+        "kind": "equity",
+        "location": "line 3",
+        "pct": 20,
+        "quote": "Uday Kapoor (PAN ABCPK7890D) - 2,000 Class B equity shares - 20%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "umber_shareholders",
+        "held": "Umber Labs Private Limited",
+        "holder": "Vani Rao",
+        "kind": "equity",
+        "location": "line 4",
+        "pct": 80,
+        "quote": "Vani Rao (PAN BCDPR8901E) - 8,000 Class A equity shares - 80%",
+        "verification": "quote and percentage verified"
+      },
+      {
+        "doc": "umber_articles",
+        "held": "Umber Labs Private Limited",
+        "holder": "Uday Kapoor",
+        "kind": "special_voting",
+        "location": "line 2",
+        "pct": null,
+        "quote": "Each Class B equity share carries ten votes",
+        "verification": "quote verified"
+      }
+    ],
+    "rejected": []
+  }
+}
